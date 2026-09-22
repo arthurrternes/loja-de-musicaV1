@@ -1,0 +1,28 @@
+<%-include('../cabecalho.ejs')%>
+    <h1>Fornecedores</h1>
+    <div>
+        <form action="
+        " method="post">
+        <input type="text" name="filtro"
+         id="" placeholder="digite o nome">
+         <button type="submit">Pesquisar</button>
+    </form>
+    </div>
+    <a href="/fornecedor/add">+ Fornecedor</a>
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>CNPJ</td>
+            <td>Ações</td>
+        </tr>
+      
+        <%for (const {id, nome, cnpj} of fornecedors) {%>
+        <tr>
+            <td><%=nome%></td>
+            <td><%=cnpj%></td>
+            <td><a href="/fornecedor/edt/<%=id%>">Editar</a>
+            <a href="/fornecedor/del/<%=id%>">Excluir</a></td>
+        </tr>
+        <%}%>
+    </table>
+ <%-include('../rodape.ejs')%>

@@ -1,0 +1,22 @@
+<%-include('../cabecalho.ejs')%>
+    <h1>Marcas de Instrumentos</h1>
+    <a href="/marca/add">+ Marca</a>
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>Tipo de Instrumento</td>
+            <td>Ano de Fundação</td>
+            <td>Ações</td>
+        </tr>
+      
+        <%for (const {id, nome, tipInstrumentos, anofundacao} of marcas) {%>
+        <tr>
+            <td><%=nome%></td>
+                <td><%=tipInstrumentos%></td>
+            <td><%=anofundacao%></td>
+            <td><a href="/marca/edt/<%=id%>">Editar</a>
+            <a href="/marca/del/<%=id%>">Excluir</a></td>
+        </tr>
+        <%}%>
+    </table>
+ <%-include('../rodape.ejs')%>

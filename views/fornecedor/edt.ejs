@@ -1,0 +1,20 @@
+<%-include('../cabecalho.ejs')%>
+<h1>Editar Fornecedor</h1>
+<div>
+<a href="/fornecedor/lst">Ver Lista de Fornecedores</a>
+</div>
+<div>
+    <form  method="post">
+        <label>Nome:</label>
+        <input type="text" name="nome" 
+        value="<%=fornecedor.nome%>" required><br>
+         <label>CNPJ:</label>
+        <input type="text" name="cnpj" required
+        value="<%=fornecedor.cnpj%>"
+        ><br>
+        <button type="submit">Editar</button>
+        
+    </form>
+</div>
+
+<%-include('../rodape.ejs')%>

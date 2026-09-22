@@ -1,0 +1,27 @@
+<%-include('../cabecalho.ejs')%>
+<h1>Editar Instrumento</h1>
+<div>
+<a href="/instrumento/lst">Ver Lista de Instrumentos</a>
+</div>
+<div>
+    <form  method="post">
+    
+        <label>Nome:</label>
+        <input type="text" name="nome" 
+        value="<%=Instrumento.nome%>" required><br>
+         <label>Categoria:</label>
+        <input type="text" name="categoria"
+        value="<%=Instrumento.categoria%>"
+        ><br>
+        <label>Preço:</label>
+        <input type="number" name="preco" 
+        value="<%=Instrumento.preco%>" required><br>
+        <label>Nível:</label>
+        <input type="text" name="nivel" 
+        value="<%=Instrumento.nivel%>" required><br>
+        <button type="submit">Editar</button>
+        
+    </form>
+</div>
+
+<%-include('../rodape.ejs')%>

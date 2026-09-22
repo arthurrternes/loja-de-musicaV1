@@ -1,0 +1,21 @@
+<%-include('../cabecalho.ejs')%>
+<h1>Adicionar Instrumento</h1>
+<div>
+<a href="/instrumento/lst">Listar</a>
+</div>
+<div>
+    <form  method="post">
+        <label>Nome:</label>
+        <input type="text" name="nome" required><br>
+         <label>Categoria:</label>
+        <input type="text" name="categoria" required><br>
+        <label>Preço:</label>
+        <input type="number" name="preco" required  ><br>
+        <label>Instrumento para qual nivel de aluno?</label>
+        <input type="text" name="nivel" required><br>
+        <button type="submit">Cadastrar</button>
+        
+    </form>
+</div>
+
+<%-include('../rodape.ejs')%>

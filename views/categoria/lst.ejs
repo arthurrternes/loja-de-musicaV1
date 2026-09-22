@@ -1,0 +1,18 @@
+<%-include('../cabecalho.ejs')%>
+    <h1>Categorias</h1>
+    <a href="/categoria/add">+ Categoria</a>
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>Ações</td>
+        </tr>
+      
+        <%for (const {id, nome} of categorias) {%>
+        <tr>
+            <td><%=nome%></td>
+             <td><a href="/categoria/edt/<%=id%>">Editar</a>
+            <a href="/categoria/del/<%=id%>">Excluir</a></td>
+        </tr>
+        <%}%>
+    </table>
+ <%-include('../rodape.ejs')%>
