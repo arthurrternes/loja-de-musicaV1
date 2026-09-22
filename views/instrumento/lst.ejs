@@ -14,15 +14,17 @@
             <td>Categoria</td>
             <td>Preço</td>
             <td>Nível</td>
+            <td>Foto</td>
             <td>Ações</td>
         </tr>
       
-        <%for (const {id, nome, categoria, preco, nivel} of Instrumentos) {%>
+        <%for (const {id, nome, categoria, preco, nivel, foto} of Instrumentos) {%>
         <tr>
             <td><%=nome%></td>
-            <td><%=categoria%></td>
+            <td><%=categoria ? categoria.nome : ''%></td>
             <td><%=preco%></td>
             <td><%=nivel%></td>
+            <td><% if(foto){ %><img src="<%=foto%>" width="80" height="80"><% } %></td>
             <td><a href="/instrumento/edt/<%=id%>">Editar</a>
             <a href="/instrumento/del/<%=id%>">Excluir</a></td>
         </tr>

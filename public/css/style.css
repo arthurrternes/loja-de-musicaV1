@@ -1,13 +1,26 @@
+/* ===== Tema: Sistema de Instrumentos (tons de madeira/instrumento) ===== */
+:root {
+    --madeira-escura: #4a2f22;
+    --madeira: #7b4b30;
+    --madeira-clara: #a9744d;
+    --dourado: #c9a24b;
+    --dourado-escuro: #a9822f;
+    --creme: #f6efe3;
+    --creme-claro: #fffaf1;
+    --texto: #3b2a1f;
+}
+
 /* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: var(--creme);
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    color: var(--texto);
   }
   
   .footer{
@@ -15,18 +28,25 @@ body {
   }
   
   .container {
-    background-color: #fff;
+    background-color: var(--creme-claro);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(74, 47, 34, 0.15);
+    border-top: 4px solid var(--dourado);
     width: 80%;
     max-width: 100%;
   }
   
   h1 {
     text-align: center;
-    color: #333;
+    color: var(--madeira-escura);
     margin-bottom: 20px;
+  }
+
+  h2 {
+    text-align: center;
+    color: var(--madeira);
+    font-weight: normal;
   }
   
   /* Estilos do Menu de Navegação */
@@ -43,6 +63,18 @@ body {
     text-align: center;
   }
   
+  /* Links puros (sem classe .btn) */
+  a {
+    color: var(--madeira);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: var(--dourado-escuro);
+    text-decoration: underline;
+  }
+
   /* Estilos do Formulário */
   .form-group {
     margin-bottom: 15px;
@@ -60,6 +92,54 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+
+  /* Formulários HTML puro (fora de .form-group) */
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  label {
+    color: var(--madeira-escura);
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"],
+  input[type="file"],
+  select {
+    padding: 8px;
+    border: 1px solid var(--madeira-clara);
+    border-radius: 4px;
+    background-color: #fff;
+    color: var(--texto);
+  }
+
+  input:focus,
+  select:focus {
+    outline: none;
+    border-color: var(--dourado);
+    box-shadow: 0 0 0 2px rgba(201, 162, 75, 0.3);
+  }
+
+  button {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: var(--madeira);
+    color: #fff;
+  }
+
+  button:hover {
+    background-color: var(--madeira-escura);
+  }
   
   /* Estilos dos Botões */
   .btn {
@@ -71,35 +151,37 @@ body {
     text-align: center;
     text-decoration: none;
     font-size: 14px;
+    font-weight: normal;
   }
   
   .btn {
-    background-color: #28a745;
+    background-color: var(--madeira);
     color: #fff;
   }
   
   .btn.edit {
-    background-color: #ffc107;
-    color: #000;
+    background-color: var(--dourado);
+    color: var(--texto);
   }
   
   .btn.add {
     color: #fff;
-    background-color:#1c0df3
+    background-color: var(--madeira-escura);
   }
   
   .btn.delete {
-    background-color: #dc3545;
+    background-color: #a13d2e;
     color: #fff;
   }
   
   .btn.cancelar {
-    background-color: #6c757d;
+    background-color: #8a7a6b;
     color: #fff;
   }
   
   .btn:hover {
-    opacity: 0.9;
+    opacity: 0.85;
+    text-decoration: none;
   }
   
   /* Estilos da Tabela */
@@ -112,15 +194,16 @@ body {
   table th, table td {
     padding: 10px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #e3d5be;
   }
   
   table th {
-    background-color: #f8f9fa;
+    background-color: var(--madeira-escura);
+    color: #fff;
   }
   
   table tr:hover {
-    background-color: #f1f1f1;
+    background-color: #f1e6d2;
   }
   
   .search

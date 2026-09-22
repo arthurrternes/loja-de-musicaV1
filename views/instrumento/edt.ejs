@@ -4,21 +4,50 @@
 <a href="/instrumento/lst">Ver Lista de Instrumentos</a>
 </div>
 <div>
-    <form  method="post">
+    <form  method="post" enctype="multipart/form-data">
     
         <label>Nome:</label>
         <input type="text" name="nome" 
         value="<%=Instrumento.nome%>" required><br>
-         <label>Categoria:</label>
-        <input type="text" name="categoria"
-        value="<%=Instrumento.categoria%>"
-        ><br>
+        <label>Categoria:</label>
+        <select name="categoria" id="categoria">
+            <option value="">selecione</option>
+            <%Categorias.forEach(function(categoria){%>
+            <option value='<%=categoria.id%>'
+            <%=(Instrumento.categoria && categoria.id.toString() === Instrumento.categoria.toString())?'selected':''%>>
+            <%=categoria.nome%></option>
+            <%})%>
+        </select><br>
+        <label>Marca:</label>
+        <select name="marca" id="marca">
+            <option value="">selecione</option>
+            <%Marcas.forEach(function(marca){%>
+            <option value='<%=marca.id%>'
+            <%=(Instrumento.marca && marca.id.toString() === Instrumento.marca.toString())?'selected':''%>>
+            <%=marca.nome%></option>
+            <%})%>
+        </select><br>
+        <label>Fornecedor:</label>
+        <select name="fornecedor" id="fornecedor">
+            <option value="">selecione</option>
+            <%Fornecedores.forEach(function(fornecedor){%>
+            <option value='<%=fornecedor.id%>'
+            <%=(Instrumento.fornecedor && fornecedor.id.toString() === Instrumento.fornecedor.toString())?'selected':''%>>
+            <%=fornecedor.nome%></option>
+            <%})%>
+        </select><br>
         <label>Preço:</label>
         <input type="number" name="preco" 
         value="<%=Instrumento.preco%>" required><br>
         <label>Nível:</label>
         <input type="text" name="nivel" 
         value="<%=Instrumento.nivel%>" required><br>
+        <label>Foto atual:</label><br>
+        <% if(Instrumento.foto){ %>
+            <img src="<%=Instrumento.foto%>" width="150" height="150"><br>
+        <% } %>
+        <label>Trocar foto (opcional):</label>
+        <input type="file" id="foto" name="foto"><br>
         <button type="submit">Editar</button>
         
     </form>

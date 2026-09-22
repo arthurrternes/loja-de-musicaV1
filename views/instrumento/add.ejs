@@ -4,15 +4,36 @@
 <a href="/instrumento/lst">Listar</a>
 </div>
 <div>
-    <form  method="post">
+    <form  method="post" enctype="multipart/form-data">
         <label>Nome:</label>
         <input type="text" name="nome" required><br>
-         <label>Categoria:</label>
-        <input type="text" name="categoria" required><br>
+        <label>Categoria:</label>
+        <select name="categoria" id="categoria">
+            <option value="">selecione</option>
+            <%Categorias.forEach(function(categoria){%>
+            <option value='<%=categoria.id%>'><%=categoria.nome%></option>
+            <%})%>
+        </select><br>
+        <label>Marca:</label>
+        <select name="marca" id="marca">
+            <option value="">selecione</option>
+            <%Marcas.forEach(function(marca){%>
+            <option value='<%=marca.id%>'><%=marca.nome%></option>
+            <%})%>
+        </select><br>
+        <label>Fornecedor:</label>
+        <select name="fornecedor" id="fornecedor">
+            <option value="">selecione</option>
+            <%Fornecedores.forEach(function(fornecedor){%>
+            <option value='<%=fornecedor.id%>'><%=fornecedor.nome%></option>
+            <%})%>
+        </select><br>
         <label>Preço:</label>
         <input type="number" name="preco" required  ><br>
         <label>Instrumento para qual nivel de aluno?</label>
         <input type="text" name="nivel" required><br>
+        <label>Foto:</label>
+        <input type="file" id="foto" name="foto"><br>
         <button type="submit">Cadastrar</button>
         
     </form>
