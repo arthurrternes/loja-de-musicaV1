@@ -24,6 +24,14 @@ export default class marcaController{
             res.render(caminhoBase + 'lst', {marcas:resultado})
         }
 
+        this.find = async(req, res)=>{
+            const filtro = req.body.filtro;
+            const resultado = await
+            Marca.find({ nome: { $regex: filtro,
+                $options: "i" }})
+            res.render(caminhoBase + 'lst', {marcas:resultado})
+        }
+
          this.openEdt = async(req, res)=>{
             //passar quem eu quero editar
             const id = req.params.id

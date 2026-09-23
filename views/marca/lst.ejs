@@ -1,5 +1,12 @@
 <%-include('../cabecalho.ejs')%>
     <h1>Marcas de Instrumentos</h1>
+        <div>
+        <form action="/marca/lst" method="post">
+        <input type="text" name="filtro"
+         id="" placeholder="digite o nome">
+         <button type="submit">Pesquisar</button>
+    </form>
+    </div>
     <a href="/marca/add">+ Marca</a>
     <table>
         <tr>
