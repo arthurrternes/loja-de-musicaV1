@@ -1,0 +1,19 @@
+<%-include('../cabecalho.ejs')%>
+<h1>Adicionar Marca</h1>
+<div>
+<a href="/marca/lst">Ver Lista de Marcas</a>
+</div>
+<div>
+    <form  method="post">
+        <label>Nome:</label>
+        <input type="text" name="nome" required><br>
+        <label>Tipo de Instrumento:</label>
+        <input type="text" name="tipInstrumentos" required><br>
+        <label>Ano Fundação:</label>
+        <input type="number" name="anofundacao" required><br>
+        <button type="submit">Cadastrar</button>
+        
+    </form>
+</div>
+
+<%-include('../rodape.ejs')%>

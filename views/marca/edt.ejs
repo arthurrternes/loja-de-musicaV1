@@ -1,0 +1,24 @@
+<%-include('../cabecalho.ejs')%>
+<h1>Editar Marca</h1>
+<div>
+<a href="/marca/lst">Ver Lista de Marcas</a>
+</div>
+<div>
+    <form  method="post">
+
+        <label>Nome:</label>
+        <input type="text" name="nome" required 
+        value="<%=marca.nome%>"><br>
+         <label>Tipo de Instrumento:</label>
+        <input type="text" name="tipInstrumentos" required
+        value="<%=marca.tipInstrumentos%>">     <br>
+        <label>Ano Fundação:</label>
+        <input type="number" name="anofundacao"
+        value="<%=marca.anofundacao%>" required><br>
+        <br>
+        <button type="submit">Editar</button>
+        
+    </form>
+</div>
+
+<%-include('../rodape.ejs')%>

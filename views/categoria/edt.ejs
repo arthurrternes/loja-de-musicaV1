@@ -1,0 +1,17 @@
+<%-include('../cabecalho.ejs')%>
+<h1>Editar Categoria</h1>
+<div>
+<a href="/categoria/lst">Ver Lista de Categorias</a>
+</div>
+<div>
+    <form  method="post">
+
+        <label>Nome:</label>
+        <input type="text" name="nome" required
+        value="<%=categoria.nome%>"><br>
+        <button type="submit">Editar</button>
+        
+    </form>
+</div>
+
+<%-include('../rodape.ejs')%>

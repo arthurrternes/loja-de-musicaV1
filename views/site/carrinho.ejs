@@ -1,0 +1,27 @@
+<%-include('cabecalho.ejs')%>
+        <main class="page container">
+            <div class="breadcrumbs"><a href="/site">Início</a><span>›</span><span>Carrinho</span></div>
+            <h1 class="page-title">Seu carrinho</h1>
+            <div class="checkout-layout">
+                <section class="cart-items">
+                    <article class="cart-item"><img
+                            src="https://images.unsplash.com/photo-1614355013870-f3916bc15ced?auto=format&fit=crop&w=400&q=85"
+                            alt="Violão acústico">
+                        <div><span class="brand">Aurora</span>
+                            <h2>Violão Acústico Aurora AC-20</h2>
+                            <p>Vendido e entregue por Harmonia</p>
+                            <div class="quantity"><span>−</span><strong>1</strong><span>+</span></div>
+                        </div><strong class="cart-price">R$ 789,90</strong>
+                    </article>
+                </section>
+                <aside class="order-summary">
+                    <h2>Resumo do pedido</h2>
+                    <p><span>Subtotal</span><strong>R$ 789,90</strong></p>
+                    <p><span>Frete</span><strong class="free">Grátis</strong></p>
+                    <div class="summary-total"><span>Total</span><strong>R$ 789,90</strong></div><a class="btn primary"
+                        href="/site/checkout">Ir para pagamento →</a><a class="continue" href="/site/catalogo">Continuar
+                        comprando</a>
+                </aside>
+            </div>
+        </main>
+<%-include('rodape.ejs')%>

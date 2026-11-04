@@ -1,0 +1,100 @@
+<%-include('cabecalho.ejs')%>
+        <main class="page container">
+            <div class="breadcrumbs"><a href="/site">Início</a><span>›</span><span>Instrumentos</span></div>
+            <div class="catalog-heading">
+                <div><span class="eyebrow">Nossa seleção</span>
+                    <h1>Todos os instrumentos</h1>
+                    <p>6 produtos encontrados</p>
+                </div><label>Ordenar por <select>
+                        <option>Mais relevantes</option>
+                        <option>Menor preço</option>
+                        <option>Maior preço</option>
+                    </select></label>
+            </div>
+            <div class="catalog-layout">
+                <aside class="filters">
+                    <h2>☷ Filtros</h2>
+                    <fieldset class="filter-group">
+                        <legend>Categoria</legend><label><input type="radio" checked name="cat">
+                            Todos</label><label><input type="radio" name="cat"> Cordas</label><label><input type="radio"
+                                name="cat"> Teclas</label><label><input type="radio" name="cat">
+                            Percussão</label><label><input type="radio" name="cat"> Áudio</label>
+                    </fieldset>
+                    <fieldset class="filter-group">
+                        <legend>Nível</legend><label><input type="checkbox"> Iniciante</label><label><input
+                                type="checkbox"> Intermediário</label><label><input type="checkbox">
+                            Profissional</label>
+                    </fieldset>
+                </aside>
+                <div class="product-grid catalog-products">
+                    <article class="product-card"><a href="/site/produto">
+                            <div class="product-image"><span class="badge">Mais vendido</span><img
+                                    src="https://images.unsplash.com/photo-1614355013870-f3916bc15ced?auto=format&fit=crop&w=700&q=85"
+                                    alt="Violão acústico"></div>
+                        </a>
+                        <div class="product-info"><span class="brand">Aurora · Iniciante</span>
+                            <h3><a href="/site/produto">Violão Acústico Aurora AC-20</a></h3>
+                            <div class="rating">★★★★★ <span>4,9 (128)</span></div>
+                            <div class="price"><del>R$ 929,90</del><strong>R$ 789,90</strong><small>10x de R$
+                                    78,99</small></div><a class="btn secondary" href="/site/carrinho">Adicionar</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image"><span class="badge">Oferta</span><img
+                                src="https://images.unsplash.com/photo-1598653222000-6b7b7a552625?auto=format&fit=crop&w=700&q=85"
+                                alt="Piano digital"></div>
+                        <div class="product-info"><span class="brand">Keys · Intermediário</span>
+                            <h3>Piano Digital Keys K88</h3>
+                            <div class="rating">★★★★★ <span>4,8 (86)</span></div>
+                            <div class="price"><strong>R$ 4.299,00</strong><small>10x de R$ 429,90</small></div><a
+                                class="btn secondary" href="/site/carrinho">Adicionar</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image"><img
+                                src="https://images.unsplash.com/photo-1708961465136-e24550f3acd5?auto=format&fit=crop&w=700&q=85"
+                                alt="Bateria acústica"></div>
+                        <div class="product-info"><span class="brand">Beat · Profissional</span>
+                            <h3>Bateria Studio Beat 5P</h3>
+                            <div class="rating">★★★★★ <span>4,7 (54)</span></div>
+                            <div class="price"><strong>R$ 5.949,00</strong><small>10x de R$ 594,90</small></div><a
+                                class="btn secondary" href="/site/carrinho">Adicionar</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image"><img
+                                src="https://images.unsplash.com/photo-1556379118-7034d926d258?auto=format&fit=crop&w=700&q=85"
+                                alt="Guitarras elétricas"></div>
+                        <div class="product-info"><span class="brand">Pulse · Intermediário</span>
+                            <h3>Guitarra Elétrica Pulse ST</h3>
+                            <div class="rating">★★★★★ <span>4,9 (102)</span></div>
+                            <div class="price"><strong>R$ 1.849,90</strong><small>10x de R$ 184,99</small></div><a
+                                class="btn secondary" href="/site/carrinho">Adicionar</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image"><img
+                                src="https://images.unsplash.com/photo-1599494009395-5b43c783a2d5?auto=format&fit=crop&w=700&q=85"
+                                alt="Teclado eletrônico"></div>
+                        <div class="product-info"><span class="brand">Keys · Iniciante</span>
+                            <h3>Teclado Arranjador Key 61</h3>
+                            <div class="rating">★★★★★ <span>4,6 (63)</span></div>
+                            <div class="price"><strong>R$ 1.299,00</strong><small>10x de R$ 129,90</small></div><a
+                                class="btn secondary" href="/site/carrinho">Adicionar</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image"><img
+                                src="https://images.unsplash.com/photo-1707215048454-66e4c10fa026?auto=format&fit=crop&w=700&q=85"
+                                alt="Home studio"></div>
+                        <div class="product-info"><span class="brand">Sonic · Intermediário</span>
+                            <h3>Kit Home Studio Essencial</h3>
+                            <div class="rating">★★★★★ <span>4,8 (41)</span></div>
+                            <div class="price"><strong>R$ 2.390,00</strong><small>10x de R$ 239,00</small></div><a
+                                class="btn secondary" href="/site/carrinho">Adicionar</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+       <%-include('rodape.ejs')%>
