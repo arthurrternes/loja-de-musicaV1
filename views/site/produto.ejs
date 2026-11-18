@@ -1,33 +1,29 @@
 <%-include('cabecalho.ejs')%>
         <main class="page container">
-            <div class="breadcrumbs"><a href="/site">Início</a><span>›</span><a
-                    href="/site/catalogo">Cordas</a><span>›</span><span>Violão Aurora</span></div>
+            <div class="breadcrumbs"><a href="/site">Início</a><span>›</span>
+                <% if(instrumento.categoria){ %><a href="/site/catalogo/<%=instrumento.categoria.id%>"><%=instrumento.categoria.nome%></a><span>›</span><% } %>
+                <span><%=instrumento.nome%></span></div>
             <section class="product-detail">
-                <div class="detail-image"><img
-                        src="https://images.unsplash.com/photo-1614355013870-f3916bc15ced?auto=format&fit=crop&w=1000&q=88"
-                        alt="Violão acústico de madeira sobre suporte"></div>
-                <div class="detail-info"><span class="brand">Aurora · Cód. HM0001</span>
-                    <h1>Violão Acústico Aurora AC-20</h1>
-                    <div class="rating">★★★★★ <span>4,9 · 128 avaliações</span></div>
-                    <p class="description">Som rico, acabamento cuidadoso e conforto para acompanhar sua evolução
-                        musical. Selecionado pelos especialistas Harmonia.</p>
-                    <p class="availability">● Em estoque · Enviado por Som Brasil</p>
-                    <div class="detail-price"><del>R$ 929,90</del><strong>R$ 789,90</strong><span>ou 10x de R$ 78,99 sem
-                            juros</span></div>
+                <div class="detail-image"><% if(instrumento.foto){ %><img src="<%=instrumento.foto%>" alt="<%=instrumento.nome%>"><% } %></div>
+                <div class="detail-info"><span class="brand"><%=instrumento.marca ? instrumento.marca.nome : ''%></span>
+                    <h1><%=instrumento.nome%></h1>
+                    <p class="description">Instrumento indicado para o nível <%=instrumento.nivel%><% if(instrumento.categoria){ %>, da categoria <%=instrumento.categoria.nome%><% } %>.</p>
+                    <% if(instrumento.fornecedor){ %><p class="availability">● Fornecido por <%=instrumento.fornecedor.nome%></p><% } %>
+                    <div class="detail-price"><strong>R$ <%=instrumento.preco%></strong></div>
                     <div class="buy-row">
                         <div class="quantity"><span>−</span><strong>1</strong><span>+</span></div><a class="btn primary"
                             href="/site/carrinho">Adicionar ao carrinho</a>
                     </div>
                     <div class="shipping"><strong>Calcule o frete e prazo</strong>
-                        <p><input placeholder="00000-000"> <button class="btn secondary">Calcular</button></p>
+                        <p><input placeholder="00000-000"> <button class="btn secondary" type="button">Calcular</button></p>
                     </div>
                 </div>
             </section>
             <section class="spec-grid">
-                <p><span>Marca</span><strong>Aurora</strong></p>
-                <p><span>Categoria</span><strong>Cordas</strong></p>
-                <p><span>Nível</span><strong>Iniciante</strong></p>
-                <p><span>Fornecedor</span><strong>Som Brasil</strong></p>
+                <p><span>Marca</span><strong><%=instrumento.marca ? instrumento.marca.nome : '-'%></strong></p>
+                <p><span>Categoria</span><strong><%=instrumento.categoria ? instrumento.categoria.nome : '-'%></strong></p>
+                <p><span>Nível</span><strong><%=instrumento.nivel%></strong></p>
+                <p><span>Fornecedor</span><strong><%=instrumento.fornecedor ? instrumento.fornecedor.nome : '-'%></strong></p>
             </section>
         </main>
         <%-include('rodape.ejs')%>

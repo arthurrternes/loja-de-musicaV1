@@ -17,7 +17,7 @@
             <a class="logo" href="/site" aria-label="Harmonia - início"><span
                     class="logo-mark"><i></i><i></i><i></i><i></i></span><span>harmonia<small>instrumentos
                         musicais</small></span></a>
-            <form class="search" action="/site/catalogo"><label hidden for="busca">Buscar produtos</label><input
+            <form class="search" action="/site/catalogo" method="post"><label hidden for="busca">Buscar produtos</label><input
                     id="busca" name="q" placeholder="O que você quer tocar hoje?"><button
                     aria-label="Pesquisar">⌕</button></form>
             <div class="header-actions"><a class="header-action"
@@ -26,9 +26,10 @@
             </div>
         </div>
         <nav class="nav" aria-label="Navegação principal">
-            <div class="nav-inner container"><a href="/site/catalogo">Todos os produtos</a><a
-                    href="/site/catalogo">Cordas</a><a href="/site/catalogo">Teclas</a><a
-                    href="/site/catalogo">Percussão</a><a href="/site/catalogo">Áudio</a><a class="offer"
-                    href="/site/catalogo">Ofertas</a><a href="/site/pedidos">Meus pedidos</a></div>
+            <div class="nav-inner container"><a href="/site/catalogo">Todos os produtos</a>
+                <% categorias.forEach(function(categoria){ %>
+                <a href="/site/catalogo/<%=categoria.id%>"><%=categoria.nome%></a>
+                <% }) %>
+                <a href="/site/pedidos">Meus pedidos</a></div>
         </nav>
     </header>
